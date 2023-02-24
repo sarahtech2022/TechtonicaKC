@@ -27,4 +27,8 @@ app.get("/contactme", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/contactme.html"));
 });
 
+app.use((req, res) => {
+  res.status(404).sendFile(path.join(__dirname, "../client/404.html"));
+});
+
 app.listen(PORT, () => console.log(`Hola! Server is running on PORT ${PORT}`));
