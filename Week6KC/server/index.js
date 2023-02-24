@@ -22,4 +22,9 @@ app.get("/aboutme", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/aboutme.html"));
 });
 
+app.get("/contactme", (req, res) => {
+  //res.json("Hello, this will be a single page");
+  res.sendFile(path.join(__dirname, "../client/contactme.html"));
+});
+
 app.listen(PORT, () => console.log(`Hola! Server is running on PORT ${PORT}`));
